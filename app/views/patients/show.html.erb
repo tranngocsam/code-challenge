@@ -1,0 +1,29 @@
+<div class="container">
+  <div class="row">
+    <div class="col-xs-12">
+      <table class="table">
+        <tbody>
+          <tr>
+            <td>Name</td>
+            <td colspan="2"><%= @patient.name %></td>
+          </tr>
+          <tr>
+            <td>Date of birth</td>
+            <td colspan="2"><%= @patient.dob.try(:strftime, "%m/%d/%Y") %></td>
+          </tr>
+          <tr>
+            <td>Address</td>
+            <td colspan="2"><%= @patient.address %></td>
+          </tr>
+          <% @patient.patient_formulation_ingredients.each do |formulation_ingredient| %>
+            <tr>
+              <td><%= formulation_ingredient.formulation.name %></td>
+              <td><%= formulation_ingredient.ingredient.name %></td>
+              <td><%= formulation_ingredient.percentage %>%</td>
+            </tr>
+          <% end %>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>
