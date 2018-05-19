@@ -1,0 +1,20 @@
+export default {
+  REQUEST: {
+    LOADING: "LOADING",
+    LOADING_SUCCESS: "LOADING_SUCCESS",
+    LOADING_ERROR: "LOADING_ERROR"
+  },
+  COMMON: {
+    cantBeBlankMessage: "can't be blank",
+    isInvalidMessage: "is invalid",
+    dateFormat: "MM/DD/YYYY"
+  },
+  SESSION: {
+    LOAD_SESSION_INFO: "LOAD_SESSION_INFO"
+  },
+  PATIENT: {
+    LOAD_FORMULATIONS: "LOAD_FORMULATIONS",
+    LOAD_FORMULATION_INGREDIENTS: "LOAD_FORMULATION_INGREDIENTS",
+    CREATE_PATIENT: "CREATE_PATIENT"
+  }
+};

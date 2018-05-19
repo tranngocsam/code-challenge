@@ -1,0 +1,12 @@
+@import "bootstrap";
+@import "react-select";
+@import "react-datetime";
+@import "rc-slider";
+
+$error_text: #AA0000;
+
+.has-error {
+  .error-message {
+    color: $error_text;
+  }
+}
