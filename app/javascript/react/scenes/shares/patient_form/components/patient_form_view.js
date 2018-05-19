@@ -98,7 +98,7 @@ class PatientFormView extends React.Component {
       this.props.loadFormulations({"search[term]": input});
     }
 
-    this.setState({formulationTerm: input});
+    this.setState({formulationsTerm: input});
   }
 
   selectFormulation(option) {
@@ -177,8 +177,12 @@ class PatientFormView extends React.Component {
       });
     }
 
-    if (this.state.noFormulationsText) {
-      noFormulationsText = "No formulations found";
+    if (this.state.formulationsTerm) {
+      if (this.props.formulationsActionStatus == constants.REQUEST.LOADING) {
+        noFormulationsText = "Loading...";
+      } else {
+        noFormulationsText = "No formulations found";
+      }
     }
 
     if (this.props.formulationIngredientsActionStatus == constants.REQUEST.LOADING) {
