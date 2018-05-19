@@ -6,7 +6,7 @@ class PatientsController < ApplicationController
     render(pdf: pdf_filename,
       template: "patients/show.html",
       layout: "patient_pdf",
-      javascript_delay: 5000,
+      javascript_delay: 500,
       disable_javascript: false,
       disposition: 'attachment',
       margin: {

@@ -192,12 +192,14 @@ class PatientFormView extends React.Component {
         let formulationIngredient = formulationIngredients[i];
         let value = 1*patientFormulationIngredients[formulationIngredient.ingredient_id];
         let ingredient = formulationIngredient.ingredient;
+        let min = 1*ingredient.minimum_percentage;
+        let max = 1*ingredient.maximum_percentage
         let ingredientFormGroup = (
           <div className="form-group" key={i}>
             <label>{ingredient.name} ({value})</label>
-            <Slider min={0}
-                    max={100}
-                    step={0.05}
+            <Slider min={min}
+                    max={max}
+                    step={0.01}
                     value={value}
                     onChange={(value)=> this.setFormulationIngredientValue(formulationIngredient, value)}/>
           </div>
